@@ -20,18 +20,11 @@
             "outputPath": "dist/my-app-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "less",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.less"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.less"],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -70,7 +63,8 @@
               "buildTarget": "my-app-angular:build:production"
             },
             "development": {
-              "buildTarget": "my-app-angular:build:development"
+              "buildTarget": "my-app-angular:build:development",
+              "port": 4221
             }
           },
           "defaultConfiguration": "development"
@@ -84,23 +78,18 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "less",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.less"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.less"],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d0826489-72a0-49e2-be97-031f88e15205"
   }
 }
