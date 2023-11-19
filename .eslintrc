@@ -4,8 +4,15 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended"
   ],
+  "eslint.options": {
+    "extensions": [
+      ".ts",
+      ".html"
+    ]
+  },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "angular"
   ],
   "env": {
     "browser": true,
@@ -13,6 +20,12 @@
   },
   "rules": {
     "no-console": "warn",
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "angular/component-selector": [
+      "error",
+      "element",
+      "app",
+      "kebab-case"
+    ]
   }
 }
