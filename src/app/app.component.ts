@@ -1,23 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './modules/home/home.component';
-import { ParentAddLifeCycleComponent } from './modules/demoComponent/11-17/101-parent-add-life-cycle/parent.component';
-import { ParentContentViewComponent } from './modules/demoComponent/11-17/102-parent-content-view/parent.component';
-import { ParentLifeCycleComponent } from './modules/demoComponent/11-17/103-parent-life-cycle/parent.component';
-import { ParentDoCheckComponent } from './modules/demoComponent/11-17/104-parent-do-check/parent.component';
+// import { My102DataComponent } from './modules/demoComponent/11-19/demo/my102-data/my102-data.component';
+import { My001Component } from './modules/demoComponent/11-19/wang/my001/my001.component';
 
+import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule,
     RouterOutlet,
-    HomeComponent,
-    ParentAddLifeCycleComponent,
-    ParentContentViewComponent,
-    ParentLifeCycleComponent,
-    ParentDoCheckComponent,
+    // My102DataComponent,
+    My001Component,
+    HttpClientModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less'],

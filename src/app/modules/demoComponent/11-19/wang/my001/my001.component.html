@@ -1,0 +1,79 @@
+<p>my001 works!</p>
+<!-- 基础数据类型 -->
+<ul>
+  <li>{{ name }} 亮亮</li>
+  <li>{{ age }}</li>
+  <li>{{ school }}</li>
+</ul>
+
+<!-- 复杂数据类型 -->
+<ul>
+  <li>{{ names }}</li>
+  <li>{{ names[0] }}</li>
+  <li>{{ boss }}</li>
+  <li>{{ boss.name }}</li>
+  <li>{{ boss.age }}</li>
+</ul>
+
+<!-- 比较运算符 -->
+<ul>
+  <li>{{ age > 18 }}</li>
+  <li>{{ age >= 18 }}</li>
+  <li>{{ age < 18 }}</li>
+  <li>{{ age <= 18 }}</li>
+  <li>{{ age != 18 }}</li>
+  <li>{{ age === 18 }}</li>
+  <li>{{ age == 18 }}</li>
+</ul>
+
+<!-- 三元运算符 xx  ? xx  :  xx -->
+<ul>
+  <li>{{ age > 18 ? '上大学了' : '上高中' }}</li>
+  <li>{{ age <= 18 ? '上高中' : ' 上大学了 ' }}</li>
+</ul>
+
+<!-- 逻辑运算符 && || !  -->
+<ul>
+  <li>{{ true && true }}</li>
+  <li>{{ true && false }}</li>
+  <li>{{ false || true }}</li>
+  <li>{{ false || false }}</li>
+  <li>{{ boss.sname || '花花===' }}</li>
+  <li>{{ !true }}</li>
+</ul>
+
+<!-- 对象的方法调用 -->
+<ul>
+  <li>{{ 'hello'.toLocaleUpperCase() }}</li>
+  <li>{{ showName() }}</li>
+</ul>
+
+<!-- 点击事件 -->
+<ul>
+  <li>
+    <button (click)="showClick()">点击事件</button>
+  </li>
+  <li></li>
+</ul>
+
+<!-- 属性 -->
+
+<ul>
+  <li>{{ htmlValue }}</li>
+  <li [innerHTML]="htmlValue">
+    <!-- <h2>我是html</h2> -->
+  </li>
+</ul>
+<!-- 样式属性 -->
+<ul>
+  <li [ngStyle]="{ color: 'red', 'font-size': size + 'px' }">{{ age }}</li>
+  <button (click)="size = size + 1">变大</button>
+</ul>
+
+<!-- 双向数据绑定 v-model -->
+<ul>
+  <input type="text" [(ngModel)]="name" />
+  <li>{{ name }} ====</li>
+</ul>
+
+<!-- 敲一遍 -->

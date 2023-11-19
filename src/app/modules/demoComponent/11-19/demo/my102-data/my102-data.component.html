@@ -1,0 +1,48 @@
+<p>my102-data works!</p>
+
+<!-- 基础数据类型 -->
+<ul>
+  <li>{{ name }}</li>
+  <li>{{ age }}</li>
+  <li>{{ married }}</li>
+</ul>
+
+<!-- 复杂数据类型 -->
+<ul>
+  <li>{{ names }}</li>
+  <li>{{ names[0] }}</li>
+  <!-- 特殊需要注意下 -->
+  <li>{{ boss }}</li>
+  <li>{{ boss.name }}</li>
+</ul>
+<!-- 运算符 -->
+<ul>
+  <li>{{ age > 30 }}</li>
+  <li>{{ age >= 30 }}</li>
+  <li>{{ age < 30 }}</li>
+  <li>{{ age <= 30 }}</li>
+  <li>{{ age === 30 }}</li>
+  <li>{{ age != 30 }}</li>
+</ul>
+
+<ul>
+  <li>{{ true && true }}</li>
+  <li>{{ true && false }}</li>
+  <li>{{ false || true }}</li>
+  <li>{{ false || false }}</li>
+  <li>{{ !false }}</li>
+  <li>{{ !true }}</li>
+</ul>
+
+<!-- 调用对象和类声明中的方法 -->
+<ul>
+  <li>{{ 'hello'.toLocaleUpperCase() }}</li>
+  <li>{{ show() }}</li>
+  <li></li>
+</ul>
+
+<!-- 点击事件 -->
+<ul>
+  <li><button (click)="showClick()">点击事件</button></li>
+  <li></li>
+</ul>
