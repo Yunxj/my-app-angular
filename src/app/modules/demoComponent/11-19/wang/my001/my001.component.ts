@@ -16,6 +16,7 @@ export class My001Component {
   school = true;
   // 数组
   names = ['花花', '亮亮', '明明'];
+  namesO = [{ name: '花花', data: [] }, '亮亮', '明明'];
   // 对象
   boss: any = {
     name: '元芳',

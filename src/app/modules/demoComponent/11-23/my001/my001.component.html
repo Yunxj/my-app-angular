@@ -1,0 +1,52 @@
+<p>my001 works!</p>
+<h3>成绩： {{ score }}</h3>
+<div *ngIf="score >= 90">优秀</div>
+<div *ngIf="score < 90 && score >= 70">良好</div>
+<div *ngIf="score < 70 && score >= 60">及格</div>
+
+<button (click)="score = score + 10">更改成绩</button>
+<div>
+  <ng-container *ngIf="score >= 60; else big"> 优秀 </ng-container>
+  <!-- <div *ngIf="score >= 60; else bigs">优秀</div>
+    <!-- <ng-template #bigs> 良好 </ng-template> -->
+  <div #bigs>良好</div>
+  <div *ngIf="score >= 60; bigs">优秀</div>
+  <!-- <ng-template #bigs> 良好 </ng-template> -->
+  <div #bigs>良好</div>
+  -->
+  <ng-template #big> 良好 </ng-template>
+</div>
+
+<div>
+  <!-- <ng-container *ngIf="score >= 60; else bigs"> 优秀 </ng-container>
+  <ng-template #bigs> 良好 </ng-template> -->
+</div>
+
+<button (click)="type = type + 1">升级会员</button>
+<span [ngSwitch]="type">
+  <h4 *ngSwitchCase="1">普通会员</h4>
+  <h4 *ngSwitchCase="2">白金会员</h4>
+  <h4 *ngSwitchCase="3">黄金会员</h4>
+  <h4 *ngSwitchCase="4">钻石会员</h4>
+  <h4 *ngSwitchDefault>未知等级</h4>
+  <!-- <h4>{{ typeName directive }}</h4> -->
+</span>
+
+<ul *ngFor="let item of names; let i = index">
+  <li>{{ i + 1 }}. {{ item.goods }}</li>
+</ul>
+
+<!-- 快捷键 ng generate directive  xxx ; ng g d focus  -->
+
+<input type="text" appFocus />
+
+<h4 appUpper>hello</h4>
+
+<!-- 分两块
+  1、系统，
+    1、if if-else switch
+  2、自定义
+    1、ng g d focus，生成
+    2、使用,ts import ，html里面 - selector名字
+    3、检查使用是否报错，不报错，就写逻辑代码。
+ -->
