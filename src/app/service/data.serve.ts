@@ -14,7 +14,7 @@ export class DataService {
       age: 18,
     },
   ];
-  fetchData(): Observable<Object> {
+  get(): Observable<Object> {
     return new Observable(observer => {
       setTimeout(() => {
         observer.next(this.data);

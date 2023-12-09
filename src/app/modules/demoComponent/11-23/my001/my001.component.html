@@ -7,19 +7,19 @@
 <button (click)="score = score + 10">更改成绩</button>
 <div>
   <ng-container *ngIf="score >= 60; else big"> 优秀 </ng-container>
-  <!-- <div *ngIf="score >= 60; else bigs">优秀</div>
-    <!-- <ng-template #bigs> 良好 </ng-template> -->
+  <div *ngIf="score >= 60; else bigs">优秀</div>
+  <ng-template #bigs> 良好 </ng-template>
   <div #bigs>良好</div>
   <div *ngIf="score >= 60; bigs">优秀</div>
-  <!-- <ng-template #bigs> 良好 </ng-template> -->
+  <ng-template #bigs> 良好 </ng-template>
   <div #bigs>良好</div>
-  -->
+
   <ng-template #big> 良好 </ng-template>
 </div>
 
 <div>
-  <!-- <ng-container *ngIf="score >= 60; else bigs"> 优秀 </ng-container>
-  <ng-template #bigs> 良好 </ng-template> -->
+  <ng-container *ngIf="score >= 60; else big"> 优秀 </ng-container>
+  <ng-template #big> 良好 </ng-template>
 </div>
 
 <button (click)="type = type + 1">升级会员</button>

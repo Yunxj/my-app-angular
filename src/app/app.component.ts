@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 // import { My102DataComponent } from './modules/demoComponent/11-19/demo/my102-data/my102-data.component';
 // import { My001Component } from './modules/demoComponent/11-19/wang/my001/my001.component';
-import { My001Component } from './modules/demoComponent/11-23/my001/my001.component';
-
+import { My003Component } from './modules/demoComponent/12-06/my003/my003.component';
+import { MockPostInterceptor } from './service/mock-post.interceptor';
 import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-root',
@@ -13,8 +13,15 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     RouterOutlet,
     // My102DataComponent,
-    My001Component,
+    My003Component,
     HttpClientModule,
+  ],
+  providers: [
+    {
+      provide: 'HTTP_INTERCEPTORS',
+      useClass: MockPostInterceptor,
+      multi: true,
+    },
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less'],

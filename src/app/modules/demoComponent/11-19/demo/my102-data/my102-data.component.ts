@@ -21,7 +21,7 @@ export class My102DataComponent implements OnInit {
   constructor(private dataService: DataService, public http: HttpClient) {}
 
   ngOnInit() {
-    this.dataService.fetchData().subscribe(res => {
+    this.dataService.get().subscribe(res => {
       console.log(res, 'res');
     });
     // let url = '';

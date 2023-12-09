@@ -1,0 +1,11 @@
+<p>my003 works!</p>
+
+<h2>{{ fname }}</h2>
+<app-my004-c
+  name="亮亮"
+  [age]="age"
+  #my004
+  (msgEvent)="show($event)"
+></app-my004-c>
+
+<button (click)="change()">修改my004的值</button>
