@@ -1,0 +1,12 @@
+<h3>my002 works!</h3>
+
+<div class="my02">
+  my002 数据共享
+
+  <ul>
+    <li *ngFor="let item of nameSS.nameS; let i = index">
+      {{ item }}
+      <button (click)="my001Event.emit(i)">选中</button>
+    </li>
+  </ul>
+</div>

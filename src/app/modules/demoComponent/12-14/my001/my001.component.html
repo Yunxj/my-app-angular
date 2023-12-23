@@ -1,0 +1,21 @@
+<div class="my">
+  <div class="my-header">my001 works!</div>
+  <div class="my-body">
+    <div class="my-body-left">
+      <app-my002 (my001Event)="deleteData($event)"></app-my002>
+    </div>
+
+    <div class="my-body-center">
+      <app-my004></app-my004>
+    </div>
+
+    <div class="my-body-right">
+      <app-my003></app-my003>
+    </div>
+  </div>
+
+  <div class="my-footer">
+    <button (click)="add()">新增</button>
+    <button (click)="delete()">删除</button>
+  </div>
+</div>
